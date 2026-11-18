@@ -1,0 +1,10 @@
+=== Attempt 1: First Failure ===
+Task failed: no contact found for Unknown Person
+
+=== Attempt 2: Second Failure ===
+Task failed: no contact found for Unknown Person
+
+=== Attempt 3: Should Escalate to Human ===
+Escalated to human: User 'user1' has failed skill 'draft_email' twice.
+
+=== Audit Log ===

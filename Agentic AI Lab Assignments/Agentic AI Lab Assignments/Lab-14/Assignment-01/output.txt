@@ -1,0 +1,38 @@
+=== RUN 1: WIFI ISSUE ===
+{'rejected': False, 'response': 'Connect to Campus-Secure using your student ID.', 'outcome': {'skill': 'triage_skill', 'resolution': 'faq', 'answer': 'Connect to Campus-Secure using your student ID.'}}
+
+=== RUN 2: PASSWORD RESET ===
+{'rejected': False, 'response': 'Open the official college password reset page.\nEnter your registered student email.\nVerify your identity using the official process.\nCreate a new strong password.\nNever share your password or OTP with anyone.', 'outcome': {'skill': 'password_reset_skill', 'resolution': 'guidance', 'instructions': ['Open the official college password reset page.', 'Enter your registered student email.', 'Verify your identity using the official process.', 'Create a new strong password.', 'Never share your password or OTP with anyone.']}}
+
+=== RUN 3: UNKNOWN ISSUE ===
+{'rejected': False, 'response': 'Support ticket T-001 created.', 'outcome': {'skill': 'triage_skill', 'resolution': 'escalated', 'ticket_id': 'T-001'}}
+
+=== RUN 4: EMPTY INPUT SAFETY CHECK ===
+{'rejected': True, 'reason': 'Empty issue text'}
+
+=== SKILL VERIFICATION ===
+Triage skill: PASS
+Password reset skill: PASS
+Unknown issue escalation: PASS
+Empty input safety control: PASS
+
+=== PROMPT LOG ===
+{'stage': 'intake', 'input': 'How do I connect to wifi?'}
+{'stage': 'skill_execution', 'output': {'skill': 'triage_skill', 'resolution': 'faq', 'answer': 'Connect to Campus-Secure using your student ID.'}}
+{'stage': 'intake', 'input': 'I need help with password reset'}
+{'stage': 'skill_execution', 'output': {'skill': 'password_reset_skill', 'resolution': 'guidance', 'instructions': ['Open the official college password reset page.', 'Enter your registered student email.', 'Verify your identity using the official process.', 'Create a new strong password.', 'Never share your password or OTP with anyone.']}}
+{'stage': 'intake', 'input': 'My laptop charger is broken'}
+{'stage': 'skill_execution', 'output': {'skill': 'triage_skill', 'resolution': 'escalated', 'ticket_id': 'T-001'}}
+{'stage': 'intake', 'input': ' '}
+
+=== AUDIT LOG ===
+{'stage': 'complete', 'user': 'alice', 'issue': 'How do I connect to wifi?', 'skill': 'triage_skill', 'outcome': {'skill': 'triage_skill', 'resolution': 'faq', 'answer': 'Connect to Campus-Secure using your student ID.'}}
+{'stage': 'complete', 'user': 'bob', 'issue': 'I need help with password reset', 'skill': 'password_reset_skill', 'outcome': {'skill': 'password_reset_skill', 'resolution': 'guidance', 'instructions': ['Open the official college password reset page.', 'Enter your registered student email.', 'Verify your identity using the official process.', 'Create a new strong password.', 'Never share your password or OTP with anyone.']}}
+{'stage': 'complete', 'user': 'carol', 'issue': 'My laptop charger is broken', 'skill': 'triage_skill', 'outcome': {'skill': 'triage_skill', 'resolution': 'escalated', 'ticket_id': 'T-001'}}
+{'stage': 'intake', 'result': 'rejected: empty issue'}
+
+=== MEMORY HISTORY ===
+{'user': 'alice', 'issue': 'How do I connect to wifi?', 'outcome': {'skill': 'triage_skill', 'resolution': 'faq', 'answer': 'Connect to Campus-Secure using your student ID.'}, 'date': '2026-11-17T23:42:01'}
+{'user': 'bob', 'issue': 'I need help with password reset', 'outcome': {'skill': 'password_reset_skill', 'resolution': 'guidance', 'instructions': ['Open the official college password reset page.', 'Enter your registered student email.', 'Verify your identity using the official process.', 'Create a new strong password.', 'Never share your password or OTP with anyone.']}, 'date': '2026-11-17T23:42:01'}
+{'user': 'carol', 'issue': 'My laptop charger is broken', 'outcome': {'skill': 'triage_skill', 'resolution': 'escalated', 'ticket_id': 'T-001'}, 'date': '2026-11-17T23:42:01'}
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments>

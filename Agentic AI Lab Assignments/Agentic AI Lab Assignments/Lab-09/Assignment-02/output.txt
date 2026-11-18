@@ -1,0 +1,19 @@
+=== Evidence Table with Quality Tiers ===
+{'id': 'S1', 'type': 'peer-reviewed paper', 'quality_tier': 'peer-reviewed', 'claim': 'RAG reduces hallucination rate by 41% on domain QA.', 'evidence': '200 held-out questions from a medical knowledge base.', 'limitation': 'Small, single-domain evaluation set.'}
+{'id': 'S2', 'type': 'vendor engineering blog', 'quality_tier': 'vendor blog', 'claim': 'RAG improves answer accuracy by 35% in support-ticket QA.', 'evidence': 'Internal A/B test over 10,000 tickets.', 'limitation': 'No independent replication reported.'}
+{'id': 'S3', 'type': 'independent benchmark report', 'quality_tier': 'independent benchmark', 'claim': 'RAG introduces a latency overhead of 200-400ms per query.', 'evidence': 'Benchmarked across 5 open-source RAG pipelines.', 'limitation': 'Not tested at large scale.'}
+{'id': 'S4', 'type': 'independent research study', 'quality_tier': 'independent benchmark', 'claim': 'RAG showed no measurable reduction in hallucination rate.', 'evidence': 'Evaluation on a different domain and a larger test dataset.', 'limitation': 'Results may differ with other datasets and evaluation methods.'}
+
+=== Source Comparison ===
+{'conflicts': [{'source_1': 'S1', 'source_2': 'S4', 'description': 'S1 reports a 41% reduction in hallucinations, while S4 reports no measurable reduction.'}]}
+
+=== Quality-Weighted Executive Summary ===
+[S1] (peer-reviewed) RAG reduces hallucination rate by 41% on domain QA.
+[S2] (vendor blog) RAG improves answer accuracy by 35% in support-ticket QA.
+[S3] (independent benchmark) RAG introduces a latency overhead of 200-400ms per query.
+[S4] (independent benchmark) RAG showed no measurable reduction in hallucination rate.
+
+[Conflict: S1 vs S4] S1 reports a 41% reduction in hallucinations, while S4 reports no measurable reduction.
+Synthesis leans toward S1 because its source quality tier is higher (peer-reviewed).
+S4 is down-weighted because its quality tier is lower (independent benchmark), but its claim is not discarded.
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

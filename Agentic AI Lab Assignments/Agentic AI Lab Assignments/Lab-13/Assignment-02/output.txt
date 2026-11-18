@@ -1,0 +1,18 @@
+=== MECHANICAL TREND MONITORING ===
+Reading 1: Vibration=1.8, Temperature=61°C -> NORMAL
+Reading 2: Vibration=2.0, Temperature=63°C -> NORMAL
+Reading 3: Vibration=2.9, Temperature=70°C -> WARNING
+Reading 4: Vibration=3.2, Temperature=72°C -> WARNING
+Reading 5: Vibration=3.8, Temperature=75°C -> WARNING
+
+=== FINAL RESULT ===
+consecutive_warnings: 3
+latest_reading: {'t': 5, 'vibration': 3.8, 'temp': 75}
+recommended_action: schedule_inspection
+auto_executed: False
+
+=== VERIFICATION ===
+Three consecutive WARNING readings: PASS
+No ALARM threshold reached: PASS
+Inspection scheduled: PASS
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

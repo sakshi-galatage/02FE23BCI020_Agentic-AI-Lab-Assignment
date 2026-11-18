@@ -1,0 +1,24 @@
+=== CAPABILITY DISCOVERY ===
+read_file (resource) input={'path': 'str'} output={'content': 'str'}
+query_db (tool) input={'sql': 'str'} output={'rows': 'list'}
+call_api (tool) input={'endpoint': 'str'} output={'data': 'any'}
+list_files (resource) input={} output={'files': 'list'}
+
+=== CALL 1: READ FILE ===
+{'content': 'Agentic AI Systems - mini MCP server demo.'}
+
+=== CALL 2: QUERY DATABASE ===
+{'rows': [('AI Club Talk', 12), ('Hackathon Kickoff', 9), ('Robotics Demo', 15)]}
+
+=== CALL 3: CALL API ===
+{'data': ['AI Club Talk', 'Robotics Demo']}
+
+=== CALL 4: NEW LIST FILES CAPABILITY ===
+{'files': ['README.md', 'notes.txt', 'report.pdf']}
+
+=== REJECTION: INVALID SQL ===
+{'error': 'only SELECT statements are permitted through this tool'}
+
+=== REJECTION: UNAUTHORIZED CALLER ===
+{'error': "caller 'unregistered_agent' is not permitted to use query_db"}
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

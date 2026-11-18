@@ -1,0 +1,20 @@
+=== CASE 1: BUILDER FAILS ONCE AND SUCCEEDS ON RETRY ===
+Builder failed on attempt 1
+Retrying builder once...
+Builder succeeded on attempt 2
+{'node': 'requirement', 'owner': 'requirement_agent', 'success': True, 'state_after': {'build_attempts': 0, 'requirements': ['user login', 'event listing', 'RSVP button']}}
+{'node': 'planner', 'owner': 'planner_agent', 'success': True, 'state_after': {'build_attempts': 0, 'requirements': ['user login', 'event listing', 'RSVP button'], 'tasks': {'user login': 'task_for(user login)', 'event listing': 'task_for(event listing)', 'RSVP button': 'task_for(RSVP button)'}}}
+{'node': 'builder', 'owner': 'builder_agent', 'success': True, 'state_after': {'build_attempts': 2, 'requirements': ['user login', 'event listing', 'RSVP button'], 'tasks': {'user login': 'task_for(user login)', 'event listing': 'task_for(event listing)', 'RSVP button': 'task_for(RSVP button)'}, 'build_ok': True, 'code': 'app.py generated'}}
+{'node': 'tester', 'owner': 'tester_agent', 'success': True, 'state_after': {'build_attempts': 2, 'requirements': ['user login', 'event listing', 'RSVP button'], 'tasks': {'user login': 'task_for(user login)', 'event listing': 'task_for(event listing)', 'RSVP button': 'task_for(RSVP button)'}, 'build_ok': True, 'code': 'app.py generated', 'tests_passed': True}}
+{'node': 'reviewer', 'owner': 'reviewer_agent', 'success': True, 'state_after': {'build_attempts': 2, 'requirements': ['user login', 'event listing', 'RSVP button'], 'tasks': {'user login': 'task_for(user login)', 'event listing': 'task_for(event listing)', 'RSVP button': 'task_for(RSVP button)'}, 'build_ok': True, 'code': 'app.py generated', 'tests_passed': True, 'review_clean': True}}
+{'node': 'human_gate', 'owner': 'human', 'success': True, 'state_after': {'build_attempts': 2, 'requirements': ['user login', 'event listing', 'RSVP button'], 'tasks': {'user login': 'task_for(user login)', 'event listing': 'task_for(event listing)', 'RSVP button': 'task_for(RSVP button)'}, 'build_ok': True, 'code': 'app.py generated', 'tests_passed': True, 'review_clean': True, 'human_signoff': True}}
+
+=== CASE 2: BUILDER FAILS TWICE AND ESCALATES ===
+Builder failed on attempt 1
+Retrying builder once...
+Builder failed on attempt 2
+Retry limit reached. Escalating to human.
+{'node': 'requirement', 'owner': 'requirement_agent', 'success': True, 'state_after': {'build_attempts': 0, 'requirements': ['user login', 'event listing', 'RSVP button']}}
+{'node': 'planner', 'owner': 'planner_agent', 'success': True, 'state_after': {'build_attempts': 0, 'requirements': ['user login', 'event listing', 'RSVP button'], 'tasks': {'user login': 'task_for(user login)', 'event listing': 'task_for(event listing)', 'RSVP button': 'task_for(RSVP button)'}}}
+{'node': 'builder', 'owner': 'builder_agent', 'success': False, 'failure_behavior_triggered': 'escalate_to_human'}
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

@@ -1,0 +1,14 @@
+=== Capability Discovery ===
+read_file resource
+query_db tool
+call_api tool
+
+=== Test 1: Safe File Access ===
+{'content': 'Agentic AI Systems - Mini MCP Server Demo.'}
+
+=== Test 2: Unauthorized File Access ===
+{'error': 'Access denied: path outside safe directory'}
+
+=== Test 3: Directory Traversal Attack ===
+{'error': 'Access denied: path outside safe directory'}
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

@@ -1,0 +1,42 @@
+Q: How many students signed up for events this month, and what's the average per event?
+A: Total sign-ups: 74. Average per event: 12.33 (across 6 events).
+Notification: Draft created. It has NOT been sent.
+
+Q: Where and when is the Hackathon Kickoff?
+A: Hackathon Kickoff is at Innovation Lab on 2026-07-05.
+
+Q: Where and when is the Capstone Expo?
+A: I don't have location/date metadata for Capstone Expo in the events API.
+
+=== FULL TOOL TRACE ===
+
+1. Tool: read_csv
+Reason: Sign-up counts are stored in the CSV file.
+Input: {}
+Output: {'rows': [{'event': 'AI Club Talk', 'signups': '12'}, {'event': 'Hackathon Kickoff', 'signups': '9'}, {'event': 'Robotics Demo', 'signups': '15'}, {'event': 'GenAI Workshop', 'signups': '7'}, {'event': 'Capstone Expo', 'signups': '20'}, {'event': 'Career Panel', 'signups': '11'}], 'row_count': 6}
+
+2. Tool: calculator
+Reason: Calculate the total number of sign-ups.
+Input: {'operation': 'sum', 'values': [12, 9, 15, 7, 20, 11]}
+Output: {'result': 74}
+
+3. Tool: calculator
+Reason: Calculate the average sign-ups per event.
+Input: {'operation': 'average', 'values': [12, 9, 15, 7, 20, 11]}
+Output: {'result': 12.333333333333334}
+
+4. Tool: send_notification
+Reason: Average sign-ups are below the threshold, so a low-turnout notice must be drafted.
+Input: {'message': 'Low turnout notice: Average event sign-ups are 12.33, which is below the threshold of 13. Please promote upcoming campus events.'}
+Output: {'status': 'Draft created', 'message': 'Low turnout notice: Average event sign-ups are 12.33, which is below the threshold of 13. Please promote upcoming campus events.', 'sent': False}
+
+5. Tool: events_api
+Reason: Event date and location are stored in the events API.
+Input: {'event_name': 'Hackathon Kickoff'}
+Output: {'date': '2026-07-05', 'location': 'Innovation Lab'}
+
+6. Tool: events_api
+Reason: Checking the API for Capstone Expo details.
+Input: {'event_name': 'Capstone Expo'}
+Output: {'error': "no event metadata found for 'Capstone Expo'"}
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

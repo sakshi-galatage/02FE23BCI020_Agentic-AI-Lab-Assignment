@@ -1,0 +1,16 @@
+=== Parallel Agent Outputs ===
+research : Plan a 24-hour AI hackathon.
+logistics : {'venue': 'Grand Hall', 'venue_cost': 45000, 'date': 'Saturday'}
+budget : {'total_cap': 30000}
+judging : Innovation, technical depth and demo quality.
+
+=== Merged Plan ===
+{'format': 'Plan a 24-hour AI hackathon.', 'venue': 'Grand Hall', 'venue_cost': 45000, 'date': 'Saturday', 'budget_cap': 30000, 'judging': 'Innovation, technical depth and demo quality.'}
+
+=== Distributed Critique ===
+{'raised_by': 'logistics', 'objection': 'Logistics: Venue cost exceeds the available budget.'}
+{'raised_by': 'budget', 'objection': 'Budget: Total venue cost is above the budget cap.'}
+
+=== Final Conflict Log ===
+[{'raised_by': 'logistics', 'objection': 'Logistics: Venue cost exceeds the available budget.'}, {'raised_by': 'budget', 'objection': 'Budget: Total venue cost is above the budget cap.'}]
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

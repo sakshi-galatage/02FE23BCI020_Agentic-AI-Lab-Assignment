@@ -1,0 +1,228 @@
+=== INITIAL STUDY PLAN ===
+{
+    "Monday": {
+        "subject": "Data Structures",
+        "time": "17:00-19:00"
+    },
+    "Tuesday": {
+        "subject": "Operating Systems",
+        "time": "17:00-19:00"
+    },
+    "Wednesday": {
+        "subject": "AI Agents",
+        "time": "20:00-22:00"
+    },
+    "Thursday": {
+        "subject": "Data Structures",
+        "time": "17:00-19:00"
+    },
+    "Friday": {
+        "subject": "Operating Systems",
+        "time": "17:00-19:00"
+    },
+    "Saturday": {
+        "subject": "AI Agents",
+        "time": "17:00-19:00"
+    }
+}
+
+=== FIRST FEEDBACK ROUND ===
+{
+    "Monday": {
+        "subject": "Data Structures",
+        "time": "17:00-19:00"
+    },
+    "Tuesday": {
+        "subject": "Operating Systems",
+        "time": "20:00-22:00"
+    },
+    "Wednesday": {
+        "subject": "AI Agents",
+        "time": "20:00-22:00"
+    },
+    "Thursday": {
+        "subject": "Data Structures",
+        "time": "17:00-19:00"
+    },
+    "Friday": {
+        "subject": "Operating Systems",
+        "time": "17:00-19:00"
+    },
+    "Saturday": {
+        "subject": "AI Agents",
+        "time": "17:00-19:00"
+    }
+}
+
+=== SECOND FEEDBACK ROUND ===
+{
+    "Monday": {
+        "subject": "Data Structures",
+        "time": "17:00-19:00"
+    },
+    "Tuesday": {
+        "subject": "Operating Systems",
+        "time": "20:00-22:00"
+    },
+    "Wednesday": {
+        "subject": "AI Agents",
+        "time": "20:00-22:00"
+    },
+    "Thursday": {
+        "subject": "Data Structures",
+        "time": "17:00-19:00"
+    },
+    "Friday": {
+        "subject": "Operating Systems",
+        "time": "17:00-18:00"
+    },
+    "Saturday": {
+        "subject": "AI Agents",
+        "time": "17:00-19:00"
+    }
+}
+
+=== FULL ITERATION LOG ===
+{
+    "iteration": 1,
+    "action": "Asked user for subjects",
+    "observed": [
+        "Data Structures",
+        "Operating Systems",
+        "AI Agents"
+    ],
+    "stopped": false
+}
+{
+    "iteration": 2,
+    "action": "Asked user for hours_per_day",
+    "observed": 2,
+    "stopped": false
+}
+{
+    "iteration": 3,
+    "action": "Asked user for unavailable_days",
+    "observed": [
+        "Sunday"
+    ],
+    "stopped": false
+}
+{
+    "iteration": 4,
+    "action": "Read existing schedule",
+    "observed": {
+        "busy_days": [
+            "Wednesday"
+        ]
+    },
+    "stopped": false
+}
+{
+    "iteration": 5,
+    "action": "Generated weekly study plan",
+    "observed": {
+        "Monday": {
+            "subject": "Data Structures",
+            "time": "17:00-19:00"
+        },
+        "Tuesday": {
+            "subject": "Operating Systems",
+            "time": "17:00-19:00"
+        },
+        "Wednesday": {
+            "subject": "AI Agents",
+            "time": "20:00-22:00"
+        },
+        "Thursday": {
+            "subject": "Data Structures",
+            "time": "17:00-19:00"
+        },
+        "Friday": {
+            "subject": "Operating Systems",
+            "time": "17:00-19:00"
+        },
+        "Saturday": {
+            "subject": "AI Agents",
+            "time": "17:00-19:00"
+        }
+    },
+    "stopped": true,
+    "reason": "Study plan generated successfully"
+}
+{
+    "iteration": 6,
+    "action": "Received feedback: Move Tuesday's session to the evening.",
+    "stopped": false
+}
+{
+    "iteration": 7,
+    "action": "Updated existing plan",
+    "observed": {
+        "Monday": {
+            "subject": "Data Structures",
+            "time": "17:00-19:00"
+        },
+        "Tuesday": {
+            "subject": "Operating Systems",
+            "time": "20:00-22:00"
+        },
+        "Wednesday": {
+            "subject": "AI Agents",
+            "time": "20:00-22:00"
+        },
+        "Thursday": {
+            "subject": "Data Structures",
+            "time": "17:00-19:00"
+        },
+        "Friday": {
+            "subject": "Operating Systems",
+            "time": "17:00-19:00"
+        },
+        "Saturday": {
+            "subject": "AI Agents",
+            "time": "17:00-19:00"
+        }
+    },
+    "stopped": true,
+    "reason": "Feedback applied without regenerating the plan"
+}
+{
+    "iteration": 8,
+    "action": "Received feedback: Make Friday's session shorter, only one hour.",
+    "stopped": false
+}
+{
+    "iteration": 9,
+    "action": "Updated existing plan",
+    "observed": {
+        "Monday": {
+            "subject": "Data Structures",
+            "time": "17:00-19:00"
+        },
+        "Tuesday": {
+            "subject": "Operating Systems",
+            "time": "20:00-22:00"
+        },
+        "Wednesday": {
+            "subject": "AI Agents",
+            "time": "20:00-22:00"
+        },
+        "Thursday": {
+            "subject": "Data Structures",
+            "time": "17:00-19:00"
+        },
+        "Friday": {
+            "subject": "Operating Systems",
+            "time": "17:00-18:00"
+        },
+        "Saturday": {
+            "subject": "AI Agents",
+            "time": "17:00-19:00"
+        }
+    },
+    "stopped": true,
+    "reason": "Feedback applied without regenerating the plan"
+}
+
+Both feedback rounds completed successfully.
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments>

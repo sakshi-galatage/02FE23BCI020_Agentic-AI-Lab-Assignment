@@ -1,0 +1,20 @@
+=== User Story ===
+{'id': 'US-1', 'acceptance_criteria': ['CSV output is generated', 'Only rows matching the applied filters are exported', 'CSV header matches visible columns']}
+
+=== Independent Test Results ===
+Acceptance criteria: ['CSV output is generated', 'Only rows matching the applied filters are exported', 'CSV header matches visible columns']
+[PASS] produces output
+[PASS] header matches columns
+[FAIL] only filtered rows present
+
+=== Bug Evidence ===
+Expected: Only North rows should be exported.
+Actual CSV output:
+region,sales
+South,200
+
+=== Lineage ===
+Story <- requirement_agent(request)
+Code <- coding_agent(story) [contains deliberate bug]
+Tests <- testing_agent(story) [independent of code]
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

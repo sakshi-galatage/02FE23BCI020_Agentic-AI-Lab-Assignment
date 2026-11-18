@@ -1,0 +1,20 @@
+=== LOW-EVIDENCE INPUT TEST ===
+Article: New AI Learning Tool
+Article Text: A new AI learning tool makes students learn twice as fast.
+
+Claim:
+A new AI learning tool makes students learn twice as fast.
+
+Evidence:
+not stated in source
+
+Limitation:
+not stated in source
+
+Teaching Takeaway:
+Claims should not be accepted without supporting evidence.
+
+Confirmation:
+No fabrication occurred. Missing evidence and limitations
+were correctly reported as 'not stated in source'.
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

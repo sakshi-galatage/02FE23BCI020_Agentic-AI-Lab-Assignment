@@ -1,0 +1,17 @@
+=== Task 1 ===
+Summary stub: note has 8 words.
+
+=== Task 2 ===
+Draft email to meena@example.edu: 'Lab guide review'
+
+=== Task 3 ===
+[translated to Kannada] Hello team
+
+=== Task 4: Should Be Rejected ===
+Task rejected: User 'user1' has reached the 3-task limit.
+
+=== Audit Log ===
+{'timestamp': '2026-11-17T21:04:49', 'task': {'skill': 'summarize_notes', 'text': 'Agentic AI systems combine goals tools skills memory', 'user': 'user1'}, 'skill': 'summarize_notes', 'tool_calls': [{'tool': 'word_count', 'output': {'count': 8}}], 'result': 'Summary stub: note has 8 words.', 'error': None}
+{'timestamp': '2026-11-17T21:04:49', 'task': {'skill': 'draft_email', 'to': 'Dr. Meena', 'subject': 'Lab guide review', 'user': 'user1'}, 'skill': 'draft_email', 'tool_calls': [{'tool': 'lookup_contact', 'output': {'email': 'meena@example.edu'}}], 'result': "Draft email to meena@example.edu: 'Lab guide review'", 'error': None}
+{'timestamp': '2026-11-17T21:04:49', 'task': {'skill': 'translate_text', 'text': 'Hello team', 'target_lang': 'Kannada', 'user': 'user1'}, 'skill': 'translate_text', 'tool_calls': [], 'result': '[translated to Kannada] Hello team', 'error': None}
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

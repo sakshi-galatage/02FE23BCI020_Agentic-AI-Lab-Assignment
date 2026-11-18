@@ -1,0 +1,25 @@
+=== Research Question ===
+What are the demonstrated benefits and limitations of retrieval-augmented generation (RAG) for domain-specific question answering?
+
+=== Evidence Table ===
+{'id': 'S1', 'type': 'peer-reviewed paper', 'date': '2026-02', 'claim': 'RAG reduces hallucination rate by 41% on domain QA.', 'evidence': '200 held-out questions from a medical knowledge base.', 'limitation': 'Small, single-domain evaluation set.'}
+{'id': 'S2', 'type': 'vendor engineering blog', 'date': '2026-04', 'claim': 'RAG improves answer accuracy by 35% in support-ticket QA.', 'evidence': 'Internal A/B test over 10,000 tickets.', 'limitation': 'No independent replication reported.'}
+{'id': 'S3', 'type': 'independent benchmark report', 'date': '2026-05', 'claim': 'RAG introduces a latency overhead of 200-400ms per query.', 'evidence': 'Benchmarked across 5 open-source RAG pipelines.', 'limitation': 'Not tested at large scale.'}
+{'id': 'S4', 'type': 'independent research study', 'date': '2026-06', 'claim': 'RAG showed no measurable reduction in hallucination rate.', 'evidence': 'Evaluation on a different domain and a larger test dataset.', 'limitation': 'Results may differ with other datasets and evaluation methods.'}
+
+=== Comparison ===
+{'agreements': ['S1 and S2 both report improvements in RAG answer quality.'], 'conflicts': ['S1 reports a 41% reduction in hallucinations, while S4 reports no measurable reduction. This is a direct contradiction. A possible reason is different evaluation methodology, domain, and dataset size.'], 'gaps': ['No source in this set reports on RAG performance for non-English languages.']}
+
+=== Executive Summary ===
+[S1] RAG reduces hallucination rate by 41% on domain QA.
+[S2] RAG improves answer accuracy by 35% in support-ticket QA.
+[S3] RAG introduces a latency overhead of 200-400ms per query.
+[S4] RAG showed no measurable reduction in hallucination rate.
+[S1,S2] Agreement: S1 and S2 both report improvements in RAG answer quality.
+[S1,S4] DIRECT CONFLICT: S1 reports a 41% reduction in hallucinations, while S4 reports no measurable reduction. This is a direct contradiction. A possible reason is different evaluation methodology, domain, and dataset size.
+[gap] No source in this set reports on RAG performance for non-English languages.
+
+=== Recommended Next Questions ===
+- Why do S1 and S4 report different hallucination results?
+- How does dataset size affect RAG evaluation?
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

@@ -1,0 +1,21 @@
+=== Budget Threshold ===
+Maximum allowed budget: Rs. 5000
+
+=== Test 1: Cost Within Budget ===
+{'rejected': False, 'action': 'Restart application server', 'estimated_cost': 3000, 'reason': 'Proposal accepted for human approval.'}
+
+=== Test 2: Cost Exceeds Budget Without Approval ===
+{'rejected': True, 'reason': 'Cost exceeds budget. Finance approval required.'}
+
+=== Test 3: Cost Exceeds Budget With Finance Approval ===
+{'rejected': False, 'action': 'Upgrade production database', 'estimated_cost': 8000, 'reason': 'Proposal accepted for human approval.'}
+
+=== Test 4: Adversarial Test - Missing Cost Estimate ===
+{'rejected': True, 'reason': 'Cost estimate is missing.'}
+
+=== Final Audit Log ===
+{'action': 'Restart application server', 'cost_estimate': 3000, 'finance_approved': False, 'result': {'rejected': False, 'action': 'Restart application server', 'estimated_cost': 3000, 'reason': 'Proposal accepted for human approval.'}}
+{'action': 'Replace production database', 'cost_estimate': 8000, 'finance_approved': False, 'result': {'rejected': True, 'reason': 'Cost exceeds budget. Finance approval required.'}}
+{'action': 'Upgrade production database', 'cost_estimate': 8000, 'finance_approved': True, 'result': {'rejected': False, 'action': 'Upgrade production database', 'estimated_cost': 8000, 'reason': 'Proposal accepted for human approval.'}}
+{'action': 'Attempt to bypass budget control', 'cost_estimate': None, 'finance_approved': False, 'result': {'rejected': True, 'reason': 'Cost estimate is missing.'}}
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

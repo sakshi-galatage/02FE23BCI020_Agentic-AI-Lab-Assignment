@@ -1,0 +1,98 @@
+QUESTION: What's the average sign-up for technical events only?
+
+Filtered technical events:
+[
+    {
+        "event": "AI Club Talk",
+        "signups": "12",
+        "category": "technical"
+    },
+    {
+        "event": "Hackathon Kickoff",
+        "signups": "9",
+        "category": "technical"
+    },
+    {
+        "event": "Robotics Demo",
+        "signups": "15",
+        "category": "technical"
+    },
+    {
+        "event": "GenAI Workshop",
+        "signups": "7",
+        "category": "technical"
+    }
+]
+
+FINAL ANSWER:
+Average sign-ups for technical events: 10.75
+
+=== THREE-TOOL EXECUTION TRACE ===
+
+STEP 1
+Tool: read_csv
+Reason: Read event sign-up data from the CSV file.
+Input: {}
+Output: {'rows': [{'event': 'AI Club Talk', 'signups': '12', 'category': 'technical'}, {'event': 'Hackathon Kickoff', 'signups': '9', 'category': 'technical'}, {'event': 'Robotics Demo', 'signups': '15', 'category': 'technical'}, {'event': 'Cultural Fest', 'signups': '20', 'category': 'social'}, {'event': 'Music Night', 'signups': '18', 'category': 'social'}, {'event': 'GenAI Workshop', 'signups': '7', 'category': 'technical'}], 'row_count': 6}
+
+STEP 2
+Tool: filter_by_category
+Reason: Select only technical events as requested.
+Input: {'rows': [{'event': 'AI Club Talk', 'signups': '12', 'category': 'technical'}, {'event': 'Hackathon Kickoff', 'signups': '9', 'category': 'technical'}, {'event': 'Robotics Demo', 'signups': '15', 'category': 'technical'}, {'event': 'Cultural Fest', 'signups': '20', 'category': 'social'}, {'event': 'Music Night', 'signups': '18', 'category': 'social'}, {'event': 'GenAI Workshop', 'signups': '7', 'category': 'technical'}], 'category': 'technical'}
+Output: {'filtered_rows': [{'event': 'AI Club Talk', 'signups': '12', 'category': 'technical'}, {'event': 'Hackathon Kickoff', 'signups': '9', 'category': 'technical'}, {'event': 'Robotics Demo', 'signups': '15', 'category': 'technical'}, {'event': 'GenAI Workshop', 'signups': '7', 'category': 'technical'}], 'count': 4}
+
+STEP 3
+Tool: calculator
+Reason: Calculate average sign-ups of the filtered technical events.
+Input: {'operation': 'average', 'values': [12, 9, 15, 7]}
+Output: {'result': 10.75}
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> mkdir Lab-03
+>> mkdir Lab-03\Assignment-01
+>> New-Item Lab-03\Assignment-01\main.py
+
+
+    Directory: C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments
+
+
+Mode                 LastWriteTime         Length Name                                             
+----                 -------------         ------ ----                                             
+d-----        17-11-2026     20:13                Lab-03                                           
+
+
+    Directory: C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments\Lab-03
+
+
+Mode                 LastWriteTime         Length Name                                             
+----                 -------------         ------ ----                                             
+d-----        17-11-2026     20:13                Assignment-01                                    
+
+
+    Directory: C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments\Lab-03\Assignment-01
+
+
+Mode                 LastWriteTime         Length Name                                             
+----                 -------------         ------ ----                                             
+-a----        17-11-2026     20:13              0 main.py                                          
+
+
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> ^C
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments>  c:; cd 'c:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments'; & 'C:\Users\monik\AppData\Local\Programs\Python\Python312\python.exe' 'c:\Users\monik\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher' '49786' '--' 'C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments\Lab-03\Assignment-01\main.py' 
+=== RESEARCH SUMMARY SKILL ===
+Article: AI System Performance and Cost Study
+
+Selected Claim:
+The AI system improved prediction accuracy by 35%.
+
+Supporting Evidence:
+The result was measured using 500 test samples across 10 projects.
+
+Selection Explanation:
+Two competing claims were identified: cost reduction and accuracy improvement. The accuracy claim was selected because it has stronger supporting evidence.
+
+Limitation:
+The study provides limited information about whether the results generalize to other systems and settings.
+
+Teaching Takeaway:
+When comparing research claims, prefer the claim supported by stronger and more extensive evidence.
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

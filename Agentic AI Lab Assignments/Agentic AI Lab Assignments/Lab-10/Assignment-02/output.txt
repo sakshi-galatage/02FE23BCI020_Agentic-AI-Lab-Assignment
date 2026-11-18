@@ -1,0 +1,18 @@
+=== Scenario 1: WARNING Incident ===
+Severity: WARNING
+Proposed action: restart_single_pod
+Risk level: low
+Result: Action automatically executed.
+
+=== Scenario 2: ALARM Incident ===
+Severity: ALARM
+Proposed action: rollback_deployment
+Risk level: high
+Result: Approval requested from human.
+Action NOT auto-executed.
+
+=== Safety Verification ===
+WARNING action executed automatically: PASS
+Rollback action requires approval: PASS
+Rollback was never auto-executed: PASS
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

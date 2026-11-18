@@ -1,0 +1,7 @@
+=== Final Plan ===
+Format: A 24-hour hackathon with AI and innovation themes.
+Date: Saturday
+Venue: Alternative venue within budget
+Budget: Rs. 30000
+Judging: Innovation, technical depth, and demo quality.
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

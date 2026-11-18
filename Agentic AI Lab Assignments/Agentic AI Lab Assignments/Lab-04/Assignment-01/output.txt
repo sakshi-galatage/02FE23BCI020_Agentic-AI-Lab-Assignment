@@ -1,0 +1,43 @@
+=== PROJECT MEMORY ASSISTANT ===
+Memory saved: database = PostgreSQL
+Memory saved: hosting = AWS Cloud
+
+=== DATABASE RETRIEVAL ===
+Database: [stored memory, dated 2026-07-03] PostgreSQL
+
+=== HOSTING RETRIEVAL ===
+Hosting: [stored memory, dated 2026-07-05] AWS Cloud
+
+=== TOPIC ISOLATION TEST ===
+Database answer contains hosting fact: False
+Hosting answer contains database fact: False
+
+=== CURRENT SESSION ===
+Database: [current session] Currently reviewing PostgreSQL.
+
+=== CONFLICT CHECK ===
+
+CONFLICT DETECTED!
+Existing memory: PostgreSQL
+New statement: SQLite
+Access denied: Only team lead can update memory.
+
+=== TEAM LEAD CONFIRMATION ===
+
+CONFLICT DETECTED!
+Existing memory: PostgreSQL
+New statement: SQLite
+Team lead confirmed the new decision.
+Memory saved: database = SQLite
+
+=== PERMISSION CHECK ===
+
+CONFLICT DETECTED!
+Existing memory: SQLite
+New statement: MongoDB
+Access denied: Only team lead can update memory.
+
+=== FINAL PROJECT MEMORY ===
+Database: [stored memory, dated 2026-07-13] SQLite
+Hosting: [stored memory, dated 2026-07-05] AWS Cloud
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

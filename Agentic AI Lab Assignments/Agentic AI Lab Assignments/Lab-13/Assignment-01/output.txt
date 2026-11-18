@@ -1,0 +1,20 @@
+=== MECHANICAL ENGINEERING AGENT ===
+domain: Mechanical Engineering
+latest_reading: {'t': 4, 'vibration': 6.2, 'temp': 84}
+condition: ALARM
+recommended_action: Recommend shutdown for human review
+auto_executed: False
+
+=== ELECTRICAL ENGINEERING AGENT ===
+domain: Electrical Engineering - Load Forecasting
+latest_reading: {'hour': 5, 'load_kw': 92}
+condition: ALARM
+recommended_action: Recommend load reduction for human review
+auto_executed: False
+
+=== SAFETY VERIFICATION ===
+Mechanical Engineering: ALARM requires human review - PASS
+Electrical Engineering - Load Forecasting: ALARM requires human review - PASS
+
+Confirmed: Neither agent automatically executes ALARM actions.
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

@@ -1,0 +1,49 @@
+QUESTION: What's the average sign-up for technical events only?
+
+Filtered technical events:
+[
+    {
+        "event": "AI Club Talk",
+        "signups": "12",
+        "category": "technical"
+    },
+    {
+        "event": "Hackathon Kickoff",
+        "signups": "9",
+        "category": "technical"
+    },
+    {
+        "event": "Robotics Demo",
+        "signups": "15",
+        "category": "technical"
+    },
+    {
+        "event": "GenAI Workshop",
+        "signups": "7",
+        "category": "technical"
+    }
+]
+
+FINAL ANSWER:
+Average sign-ups for technical events: 10.75
+
+=== THREE-TOOL EXECUTION TRACE ===
+
+STEP 1
+Tool: read_csv
+Reason: Read event sign-up data from the CSV file.
+Input: {}
+Output: {'rows': [{'event': 'AI Club Talk', 'signups': '12', 'category': 'technical'}, {'event': 'Hackathon Kickoff', 'signups': '9', 'category': 'technical'}, {'event': 'Robotics Demo', 'signups': '15', 'category': 'technical'}, {'event': 'Cultural Fest', 'signups': '20', 'category': 'social'}, {'event': 'Music Night', 'signups': '18', 'category': 'social'}, {'event': 'GenAI Workshop', 'signups': '7', 'category': 'technical'}], 'row_count': 6}
+
+STEP 2
+Tool: filter_by_category
+Reason: Select only technical events as requested.
+Input: {'rows': [{'event': 'AI Club Talk', 'signups': '12', 'category': 'technical'}, {'event': 'Hackathon Kickoff', 'signups': '9', 'category': 'technical'}, {'event': 'Robotics Demo', 'signups': '15', 'category': 'technical'}, {'event': 'Cultural Fest', 'signups': '20', 'category': 'social'}, {'event': 'Music Night', 'signups': '18', 'category': 'social'}, {'event': 'GenAI Workshop', 'signups': '7', 'category': 'technical'}], 'category': 'technical'}
+Output: {'filtered_rows': [{'event': 'AI Club Talk', 'signups': '12', 'category': 'technical'}, {'event': 'Hackathon Kickoff', 'signups': '9', 'category': 'technical'}, {'event': 'Robotics Demo', 'signups': '15', 'category': 'technical'}, {'event': 'GenAI Workshop', 'signups': '7', 'category': 'technical'}], 'count': 4}
+
+STEP 3
+Tool: calculator
+Reason: Calculate average sign-ups of the filtered technical events.
+Input: {'operation': 'average', 'values': [12, 9, 15, 7]}
+Output: {'result': 10.75}
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

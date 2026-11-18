@@ -1,0 +1,43 @@
+=== Generated User Stories ===
+{'id': 'US-1', 'format': 'CSV', 'text': 'As a user, I can export the filtered report as a CSV file.', 'acceptance_criteria': ['CSV file is generated', 'Only filtered rows are exported', 'CSV header matches visible columns']}
+{'id': 'US-2', 'format': 'PDF', 'text': 'As a user, I can export the filtered report as a PDF file.', 'acceptance_criteria': ['PDF file is generated', 'Only filtered rows are exported', 'PDF contains visible column names']}
+
+=== Human Checkpoint ===
+Both feature requirements confirmed.
+
+========== US-1 : CSV EXPORT ==========
+Design: {'story_id': 'US-1', 'format': 'CSV', 'components': ['csv_export_endpoint', 'csv_serializer', 'export_button']}
+Acceptance criteria: ['CSV file is generated', 'Only filtered rows are exported', 'CSV header matches visible columns']
+[PASS] produces output
+[PASS] contains correct column names
+[PASS] only filtered rows present
+Review: {'story_id': 'US-1', 'issues': [], 'clean': True}
+Lineage:
+Story: US-1
+Design: US-1
+Code: US-1
+Tests: testing_agent(US-1) [independent of code]
+Review: US-1
+
+========== US-2 : PDF EXPORT ==========
+Design: {'story_id': 'US-2', 'format': 'PDF', 'components': ['pdf_export_endpoint', 'pdf_serializer', 'export_button']}
+Acceptance criteria: ['PDF file is generated', 'Only filtered rows are exported', 'PDF contains visible column names']
+[PASS] produces output
+[PASS] contains correct column names
+[PASS] only filtered rows present
+Review: {'story_id': 'US-2', 'issues': [], 'clean': True}
+Lineage:
+Story: US-2
+Design: US-2
+Code: US-2
+Tests: testing_agent(US-2) [independent of code]
+Review: US-2
+
+=== Final Pipeline Summary ===
+US-1 CSV Accepted
+US-2 PDF Accepted
+
+=== Final Lineage Trace ===
+US-1 -> CSV Design -> CSV Code -> CSV Tests -> CSV Review
+US-2 -> PDF Design -> PDF Code -> PDF Tests -> PDF Review
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 

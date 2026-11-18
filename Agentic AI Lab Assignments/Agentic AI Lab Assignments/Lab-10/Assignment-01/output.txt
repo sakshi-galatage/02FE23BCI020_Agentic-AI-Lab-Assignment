@@ -1,0 +1,22 @@
+=== Scenario 1: Payments Service ===
+severity: degraded
+incident_start: 14:03:40
+diagnosis: Errors started at 14:03:40, shortly after the deployment of payments-service v2.4.1. Errors are concentrated in the refund endpoint path, suggesting a possible regression in that release.
+affected_path: refund endpoint
+suspect_deploy: {'ts': '14:00:00', 'service': 'payments-service', 'version': 'v2.4.1', 'prev_version': 'v2.4.0'}
+
+=== Scenario 2: Database Pool Exhaustion ===
+severity: down
+incident_start: 15:03:00
+diagnosis: Errors started at 15:03:00, shortly after the deployment of database-service v1.8.0. Errors are concentrated in the database connection pool path, suggesting a possible regression in that release.
+affected_path: database connection pool
+suspect_deploy: {'ts': '15:00:00', 'service': 'database-service', 'version': 'v1.8.0', 'prev_version': 'v1.7.5'}
+
+=== Comparison ===
+Payments severity: degraded
+Database severity: down
+Payments affected path: refund endpoint
+Database affected path: database connection pool
+
+Confirmed: Both incidents have different diagnoses and severity.
+PS C:\Users\monik\OneDrive\Desktop\Agentic AI Lab Assignments> 
