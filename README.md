@@ -1,2 +1,2 @@
 # Agentic-AI-Lab-Assignment
-Agentic AI lab course project
+Agentic AI lab Assignment and course project
